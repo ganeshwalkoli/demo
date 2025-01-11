@@ -3,9 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing NGINX"
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
+      - echo Installing NGINX - echo yum install NGINX
+      - sudo yum update
+      - sudo yum install nginx -y
   build:
     commands:
       - echo "Build started on `date`"
@@ -15,4 +15,4 @@ phases:
       - echo "Configuring NGINX"
 artifacts:
   files:
-    - /var/www/html/index.html
+    - "**/*"
